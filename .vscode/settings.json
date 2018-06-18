@@ -1,3 +1,17 @@
 {
-    "eslint.enable": false
+    "eslint.enable": false,
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/CVS": true,
+        "**/.DS_Store": true,
+        "**/node_modules": true,
+        "**/.vs": true,
+        "**/.vscode": true
+    },
+    "editor.autoIndent": true,
+    "editor.autoClosingBrackets": true,
+    "editor.codeLens": true,
+
 }

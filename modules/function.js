@@ -8,4 +8,11 @@ module.exports = (auru, message) => {
     Thanks to him!! COOLAH CODAA!!! ^^--^^
     */
     };
+/*
+    Array.prototype.sendmsgchan = function() {
+      return this[message.channel.send]
+    };
+
+    Array.prototype.
+    */
 };

@@ -6,7 +6,6 @@ exports.run = async (auru, message, args) => {
     auru.fetchUser(yuhuu).then(wah => {
             let botembed = new Discord.RichEmbed()
             .setTitle(wah.tag)
-            .setDescription(`\n\n[**BOT INVITES LINK**](https://discordapp.com/oauth2/authorize?client_id=${yuhuu}&scope=bot&permissions=0)`)
             .addField("Bot Invite Link", `[**BOT INVITES LINK**](https://discordapp.com/oauth2/authorize?client_id=${yuhuu}&scope=bot&permissions=0)`)
             .addField("Nama Bot: ", `${wah.username}`, true)
             .addField("Ini Prefixnya: ", `${prefixtarget}`, true)

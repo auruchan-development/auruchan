@@ -12,6 +12,9 @@ module.exports = async function(message) {
     let args = message.content.slice(config.prefixes.length).trim().split(/ +/g);
     let cmd = args.shift().toLowerCase();
     let auru = message.client;
+    let dnfile = require(`../commandos/user/${cmd}.js`);
+    let dafile = require(`../commandos/serverop/${cmd}.js`);
+    let dofile = require(`../commandos/owner/${cmd}.js`);
 
     const permissions = [
         "ADMINISTRATOR",
@@ -23,7 +26,7 @@ module.exports = async function(message) {
       ];
 
     if (message.content.startsWith(`<@${config.botid}>`) || message.content.startsWith(`<@!${config.botid}>`)) {
-        message.channel.send("Feel free to acces my [Homepage](http://auru.vzrenggamani.tk)")
+        message.channel.send("Feel free to acces my http://auru.vzrenggamani.tk")
     };
 
     if (!message.content.startsWith(config.prefix)) {
@@ -35,8 +38,7 @@ module.exports = async function(message) {
     
     if (message.content.startsWith(config.prefix)) {
         try {
-            let commandFile = require(`../commandos/user/${cmd}.js`);
-            commandFile.run(auru, message, args);
+            dnfile.run(auru, message, args);
         } catch (e) {
             console.log(e.message)
         }
@@ -44,8 +46,7 @@ module.exports = async function(message) {
 
     if (message.content.startsWith(config.aprefix) && message.member.hasPermission(permissions)) {
         try {
-            let commandFile = require(`../commandos/serverop/${cmd}.js`);
-            commandFile.run(auru, message, args);
+            dafile.run(auru, message, args);
         } catch (e) {
             console.log(e.message)
         }
@@ -53,8 +54,7 @@ module.exports = async function(message) {
 
     if (message.content.startsWith(config.oprefix) && message.author.id === '303011486916411392') {
         try {
-            let commandFile = require(`../commandos/owner/${cmd}.js`);
-            commandFile.run(auru, message, args);
+            dofile.run(auru, message, args);
         } catch (e) {
             console.log(e.message)
         }

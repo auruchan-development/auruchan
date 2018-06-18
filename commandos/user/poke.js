@@ -36,6 +36,7 @@ exports.run = async (auru, message, args) => {
         .setColor("#688fff")
         .setFooter(`${footer}`)
         message.channel.send(embed)
+        
 };
 
 

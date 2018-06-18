@@ -2,7 +2,7 @@
   "name": "auruchan",
   "version": "0.1.0",
   "description": "A girly bot with minimal feature",
-  "main": "node auru.js",
+  "main": "node auru-main.js",
   "scripts": {
     "test": "eslint --ignore-path .gitignore .",
     "startspm": "node -r spm-agent-nodejs auru.js",

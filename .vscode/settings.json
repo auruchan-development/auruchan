@@ -8,7 +8,8 @@
         "**/.DS_Store": true,
         "**/node_modules": true,
         "**/.vs": true,
-        "**/.vscode": true
+        "**/.vscode": true,
+        "**/.incaseoffire": true
     },
     "editor.autoIndent": true,
     "editor.autoClosingBrackets": true,

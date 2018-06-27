@@ -8,8 +8,10 @@ const readdir = (fs.readdir);
 const sql = require("sqlite");
 const chalk = require('chalk');
 
+// Submodules
 require('./modules/eventLoader.js')(auru);
 require("./modules/function.js")(auru);
+require("./modules/node-kitsu/main.js");
 
 sql.open("./auru.sqlite");
 

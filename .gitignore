@@ -66,3 +66,4 @@ bin/Microsoft.NodejsTools.WebRole.dll
 .useless
 .vs/auruchan/v15/.suo
 *.sqlite
+config.json

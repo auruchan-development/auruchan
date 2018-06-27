@@ -1,3 +1,6 @@
 [submodule "auruchan-assets"]
 	path = auruchan-assets
 	url = https://github.com/auruchan-development/auruchan-assets.git
+[submodule "modules/node-kitsu"]
+	path = modules/node-kitsu
+	url = https://github.com/auruchan-development/node-kitsu.git

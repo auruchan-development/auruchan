@@ -12,19 +12,23 @@ module.exports = async function(message) {
     let args = message.content.slice(config.prefixes.length).trim().split(/ +/g);
     let cmd = args.shift().toLowerCase();
     let auru = message.client;
-    let dnfile = require(`../commandos/user/${cmd}.js`);
-    let dafile = require(`../commandos/serverop/${cmd}.js`);
-    let dofile = require(`../commandos/owner/${cmd}.js`);
 
     const permissions = [
-        "ADMINISTRATOR",
-        "MANAGE_CHANNELS",
-        "MANAGE_MESSAGES",
-        "MANAGE_WEBHOOKS",
-        "MANAGE_NICKNAME",
-        "MANAGE_ROLES"
+        "MANAGE_GUILD"
       ];
 
+    if (message.content.startsWith(config.prefixes)) {
+        try {
+            let dafile = require(`../commandos/serverop/${cmd}.js`)
+            let dnfile = require(`../commandos/user/${cmd}.js`)
+            let dofile = require(`../commandos/owner/${cmd}.js`)
+            dafile.run(auru, message, args)
+            dnfile.run(auru, message, args)
+            dofile.run(auru, message, args);
+        } catch (e) {
+            console.log(e.message)
+        }
+    }
     if (message.content.startsWith(`<@${config.botid}>`) || message.content.startsWith(`<@!${config.botid}>`)) {
         message.channel.send("Feel free to acces my http://auru.vzrenggamani.tk")
     };
@@ -38,6 +42,7 @@ module.exports = async function(message) {
     
     if (message.content.startsWith(config.prefix)) {
         try {
+            let dnfile = require(`../commandos/user/${cmd}.js`);
             dnfile.run(auru, message, args);
         } catch (e) {
             console.log(e.message)
@@ -46,6 +51,7 @@ module.exports = async function(message) {
 
     if (message.content.startsWith(config.aprefix) && message.member.hasPermission(permissions)) {
         try {
+            let dafile = require(`../commandos/serverop/${cmd}.js`);
             dafile.run(auru, message, args);
         } catch (e) {
             console.log(e.message)
@@ -54,6 +60,7 @@ module.exports = async function(message) {
 
     if (message.content.startsWith(config.oprefix) && message.author.id === '303011486916411392') {
         try {
+            let dofile = require(`../commandos/owner/${cmd}.js`);
             dofile.run(auru, message, args);
         } catch (e) {
             console.log(e.message)

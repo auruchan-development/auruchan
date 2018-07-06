@@ -24,3 +24,11 @@ exports.run = (auru, message, args) => {
       message.channel.send(avanya)
     }
   };
+
+  exports.help = {
+    name: "avatar",
+    category: "utility",
+    desc: "Display User Avatar",
+    use: "dn..avatar [user]",
+    param: "",
+};

@@ -9,10 +9,13 @@
         "**/node_modules": true,
         "**/.vs": true,
         "**/.vscode": true,
-        "**/.incaseoffire": true
+        "**/.incaseoffire": true,
+        "auruchan-vscode.code-workspace": true
     },
     "editor.autoIndent": true,
     "editor.autoClosingBrackets": true,
     "editor.codeLens": true,
+    //"editor.renderWhitespace": "boundary",
+
 
 }

@@ -18,4 +18,12 @@ exports.run = async (auru, message, args) => {
 		.setFooter("Auruchan - Sakura Project")
 
 		message.channel.send(botembed);
-}
+};
+
+exports.help = {
+    name: "auruprofile",
+    category: "misc",
+    desc: "Display AuruChan TechDoc",
+    use: "dn..auruprofile",
+    param: "",
+};

@@ -38,5 +38,11 @@ exports.run = async (auru, message, args) => {
         message.channel.send(embed)
 };
 
-
+exports.help = {
+    name: "pat",
+    category: "fun",
+    desc: "Pat Pat Images",
+    use: "dn..pat [user]",
+    param: "",
+};
  

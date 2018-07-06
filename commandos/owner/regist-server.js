@@ -9,11 +9,13 @@ exports.run = async (auru, message, args) => {
         return;
     }
     var guid = message.guild.id;
+	var oid = message.guild.owner.id;
+	var wawa = auru.users.get(`${oid}`)
     var invitelink = args[0];
     var sevedatawa = {
         [guid]: {
             "name": `${message.guild.name}`,
-            "owner": `${message.guild.owner.nickname}`,
+            "owner": `${wawa.username}#${wawa.discriminator}`,
             "members": {
                 "users": "usershuman",
                 "bot": "botusers",
@@ -40,7 +42,7 @@ exports.run = async (auru, message, args) => {
         }
     };
 
-    fetch('https://auru-database.firebaseio.com/guildDb.json', {
+    fetch('https://auru-datacore.firebaseio.com/guildDb.json', {
         method: 'PATCH',
         body: JSON.stringify(sevedatawa),
         headers: { 'Content-Type': 'application/json'},
@@ -52,31 +54,28 @@ exports.run = async (auru, message, args) => {
     })
 
 
-    snek.get(`https://auru-database.firebaseio.com/guildDb.json`)
-        .then(r => {
-            console.log("===RETURN-GET===")
-            console.log(r);
-            })
-    /*
-    let embed = new Discord.RichEmbed()
-    
+    fetch(`https://auru-datacore.firebaseio.com/guildDb/${message.guild.id}.json`)
+	.then(res => res.json())
+	.then(json => {
+		let embed = new Discord.RichEmbed()
+		.setColor("#ffe5ee")
+		.addBlankField()
         .setTitle(`Server Registration | ${message.guild.name} `)
-        .addField("Server Name:", json.name, true)
-        .addField("Server Id:", json.Backend.guildid, true)
+        .addField("Server Name:", json.name, false)
+        .addField("Server Id:", json.Backend.guildid, false)
         .addField("Server Owner:", json.owner, false)
         .addBlankField()
-        .addField("Verification Levels:", json.Backend.VLevels, true)
-        .addField("Server Region:", json.Backend.region, true)
-        .addField("Message Content Scan Level:", json.Backend.msgscan, true)
-        .addField("AuruId:", "NOT YET IMPLEMENTED", true)
+        .addField("Verification Levels:", json.Backend.VLevels, false)
+        .addField("Server Region:", json.Backend.region, false)
+        .addField("Message Content Scan Level:", json.Backend.msgscan, false)
+        .addField("AuruId:", "PapaTutuTuwawa", false)
         .addBlankField()
-        .addField("Channels size:", json.serversize.total, true)
-        .addField("Text Channels size:", json.serversize.TChannel, true)
-        .addField("Voice Channels size:", json.serversize.VChannel, true)
-        .addField("Category Channels size:", json.serversize.CChannel, true)
+        .addField("Channels size:", json.serversize.Channels.total, false)
+        .addField("Text Channels size:", json.serversize.Channels.TChannel, false)
+        .addField("Voice Channels size:", json.serversize.Channels.VChannel, false)
+        .addField("Category Channels size:", json.serversize.Channels.CChannel, false)
         .addBlankField()
         .setFooter("Auruchan Database | Registration Server")
-    message.channel.send(embed)
-    */
+		message.channel.send(embed)
+    });
 }
-

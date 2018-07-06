@@ -22,67 +22,54 @@
     <OutputPath>bin\auruchan-sisters\</OutputPath>
   </PropertyGroup>
   <ItemGroup>
-    <Content Include=".eslintrc.json" />
     <Content Include=".travis.yml" />
-    <Content Include="app.json" />
-    <Content Include="appveyor.yml" />
-    <Content Include="auru.sqlite" />
-    <Content Include="commandos\serverop\_status.md" />
-    <Content Include="commandos\user\_status.md" />
-    <Content Include="CONTRIBUTING.md" />
-    <Content Include="img\auru-about.png" />
-    <Content Include="img\auru-banner.png" />
-    <Content Include="img\auru-credits.png" />
-    <Content Include="img\auru-help.png" />
-    <Content Include="img\auru-pfp.png" />
-    <Content Include="img\auru-prefix.png" />
-    <Content Include="img\auru-roles.png" />
-    <Content Include="img\_aurubanner-1.png" />
-    <Content Include="img\_aurubanner-2.png" />
-    <Content Include="img\_aurubanner-3.png" />
-    <Content Include="img\_aurubanner-4.png" />
-    <Content Include="img\_aurudesu.png" />
-    <Content Include="img\_auruproject.png" />
-    <Content Include="img\_aururepos.png" />
-    <Content Include="LICENSE.txt" />
+    <Content Include="auruchan.njsproj" />
+    <Content Include="commandos\owner\hey.js.deprecated" />
+    <Content Include="commandos\owner\nanidefuk.js.deprecated" />
+    <Content Include="commandos\sandbox\hayo.js.deprecated" />
     <Content Include="package-lock.json" />
     <Content Include="package.json" />
-    <Content Include="STATUS.md" />
-    <Content Include="watch.json" />
-    <Content Include="README.md" />
-    <Content Include=".gitignore" />
-    <Compile Include="auru.js" />
-    <Content Include="auruchan.njsproj" />
-    <Content Include="Procfile" />
-    <Content Include="wa.bat" />
-    <Compile Include="commandos\owner\co.js" />
-    <Compile Include="commandos\owner\ehh.js" />
-    <Compile Include="commandos\owner\hey.js" />
-    <Compile Include="commandos\owner\nanidefuk.js" />
-    <Compile Include="commandos\owner\shinde.js" />
-    <Compile Include="commandos\serverop\BUG_severustatu.js" />
-    <Compile Include="commandos\serverop\cls.js" />
-    <Compile Include="commandos\serverop\hayo.js" />
-    <Compile Include="commandos\serverop\hook-create.js" />
-    <Compile Include="commandos\serverop\yuhuu.js" />
-    <Compile Include="commandos\user\avatar.js" />
-    <Compile Include="commandos\user\botinfo.js" />
-    <Compile Include="commandos\user\creator.js" />
-    <Compile Include="commandos\user\hug.js" />
-    <Compile Include="commandos\user\kiss.js" />
-    <Compile Include="commandos\user\neko.js" />
-    <Compile Include="commandos\user\pat.js" />
-    <Compile Include="commandos\user\ping.js" />
-    <Compile Include="commandos\user\poke.js" />
-    <Compile Include="modules\function.js" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="commandos\" />
     <Folder Include="commandos\owner\" />
+    <Folder Include="commandos\sandbox\" />
     <Folder Include="commandos\serverop\" />
     <Folder Include="commandos\user\" />
-    <Folder Include="img\" />
+    <Folder Include="events\" />
     <Folder Include="modules\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="auru-main.js" />
+    <Compile Include="commandos\owner\co.js" />
+    <Compile Include="commandos\owner\ehh.js" />
+    <Compile Include="commandos\owner\shinde.js" />
+    <Compile Include="commandos\sandbox\animus.js" />
+    <Compile Include="commandos\serverop\cls.js" />
+    <Compile Include="commandos\serverop\hook-create.js" />
+    <Compile Include="commandos\serverop\nyaa.js" />
+    <Compile Include="commandos\serverop\regist-server.js" />
+    <Compile Include="commandos\serverop\yuhuu.js" />
+    <Compile Include="commandos\user\auruprofile.js" />
+    <Compile Include="commandos\user\avatar.js" />
+    <Compile Include="commandos\user\creator.js" />
+    <Compile Include="commandos\user\gimmequest.js" />
+    <Compile Include="commandos\user\help.js" />
+    <Compile Include="commandos\user\hug.js" />
+    <Compile Include="commandos\user\kiss.js" />
+    <Compile Include="commandos\user\neko.js" />
+    <Compile Include="commandos\user\nekofact.js" />
+    <Compile Include="commandos\user\osu.js" />
+    <Compile Include="commandos\user\pat.js" />
+    <Compile Include="commandos\user\ping.js" />
+    <Compile Include="commandos\user\poke.js" />
+    <Compile Include="commandos\user\serinvlink.js" />
+    <Compile Include="commandos\user\umm.js" />
+    <Compile Include="commandos\user\userinfo.js" />
+    <Compile Include="events\message.js" />
+    <Compile Include="events\ready.js" />
+    <Compile Include="modules\eventLoader.js" />
+    <Compile Include="modules\function.js" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <!--Do not delete the following Import Project.  While this appears to do nothing it is a marker for setting TypeScript properties before our import that depends on them.-->

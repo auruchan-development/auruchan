@@ -37,5 +37,10 @@ exports.run = async (auru, message, args) => {
         message.channel.send(embed)
 };
 
-
- 
+exports.help = {
+    name: "kiss",
+    category: "fun",
+    desc: "Anime Kiss Image",
+    use: "dn..kiss [user]",
+    param: "",
+};

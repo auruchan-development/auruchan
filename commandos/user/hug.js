@@ -37,4 +37,12 @@ exports.run = async (auru, message, args) => {
         .setColor("#688fff")
         .setFooter(`${footer}`)
     message.channel.send(embed)
-}; 
+};
+
+exports.help = {
+    name: "hug",
+    category: "fun",
+    desc: "Hug Hug Images",
+    use: "dn..hug [user]",
+    param: "",
+};

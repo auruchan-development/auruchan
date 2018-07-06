@@ -67,3 +67,4 @@ bin/Microsoft.NodejsTools.WebRole.dll
 .vs/auruchan/v15/.suo
 *.sqlite
 config.json
+firebase-admin.json

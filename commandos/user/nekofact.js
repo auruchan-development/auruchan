@@ -9,4 +9,12 @@ exports.run = async (auru, message, args) => {
         .setColor("#688fff")
         .setFooter("Fact by Nekos.Life")
     message.channel.send(embed)
-}
+};
+
+exports.help = {
+    name: "nekofact",
+    category: "fun",
+    desc: "Give you some FACT!!",
+    use: "dn..nekofact",
+    param: "",
+};

@@ -8,5 +8,13 @@ exports.run = async (auru, message, args) => {
     .setColor("GREEN")
     .setImage(body.file)
     message.channel.send(catembed)
-}
+};
+
+exports.help = {
+    name: "neko",
+    category: "fun",
+    desc: "Random Neko Image",
+    use: "dn..neko",
+    param: "",
+};
 

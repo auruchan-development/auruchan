@@ -11,4 +11,12 @@ exports.run = async (auru, message, args) => {
         .addField("API", `${API}ms`, true)
         message.channel.send(embed);
     });
-}
+};
+
+exports.help = {
+    name: "ping",
+    category: "utility",
+    desc: "Display AuruChan Ping & Latency",
+    use: "dn..ping",
+    param: "",
+};

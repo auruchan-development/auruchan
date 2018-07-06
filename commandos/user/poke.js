@@ -39,5 +39,13 @@ exports.run = async (auru, message, args) => {
         
 };
 
+exports.help = {
+    name: "poke",
+    category: "fun",
+    desc: "Poke Poke Images",
+    use: "dn..poke [user]",
+    param: "",
+};
+
 
  

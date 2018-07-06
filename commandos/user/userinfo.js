@@ -20,4 +20,12 @@ module.exports.run = async (bot, message, args) => {
     .addField("Roles", member.roles.map(roles => `${roles.name}`).join(', '))
     message.channel.send(embed)
 
-}
+};
+
+exports.help = {
+    name: "userinfo",
+    category: "utility",
+    desc: "Display User Profile",
+    use: "dn..userinfo [user]",
+    param: "",
+};

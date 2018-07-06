@@ -13,4 +13,12 @@ exports.run = async (auru, message, args) => {
     	.setThumbnail("https://raw.githubusercontent.com/vzrenggamani/vzrenggamani.github.io/master/src/737487-crop.png")
     	.setAuthor("AuruChan | Ai.Chan", "https://auruchan-web.herokuapp.com")
 		message.channel.send(botembed); // untuk mengirim embed yang sudah dibuat diatas..
-}
+};
+
+exports.help = {
+    name: "creator",
+    category: "misc",
+    desc: "Giving Info About Bot Creator",
+    use: "dn..creator",
+    param: "",
+};

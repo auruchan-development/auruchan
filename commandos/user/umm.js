@@ -11,4 +11,12 @@ exports.run = async (auru, message, args) => {
         .setColor("#688fff")
         .setFooter("Nekos.Life 4 layfe")
         message.channel.send(embed)
-}
+};
+
+exports.help = {
+    name: "umm",
+    category: "fun",
+    desc: "Give you some random question",
+    use: "dn..umm (question)",
+    param: "",
+};

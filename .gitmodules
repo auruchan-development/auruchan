@@ -4,3 +4,6 @@
 [submodule "modules/node-kitsu"]
 	path = modules/node-kitsu
 	url = https://github.com/auruchan-development/node-kitsu.git
+[submodule "modules/angka-menjadi-terbilang"]
+	path = modules/angka-menjadi-terbilang
+	url = https://github.com/dikyarga/angka-menjadi-terbilang.git

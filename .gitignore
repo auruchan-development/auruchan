@@ -68,3 +68,4 @@ bin/Microsoft.NodejsTools.WebRole.dll
 *.sqlite
 config.json
 firebase-admin.json
+commandos/sandbox/

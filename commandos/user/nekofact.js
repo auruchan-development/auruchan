@@ -1,5 +1,6 @@
 const Discord = require('discord.js');
 const nekoclient = require('nekos.life');
+const superagent = require('superagent');
 
 exports.run = async (auru, message, args) => {
     let {body} = await superagent.get("https://nekos.life/api/v2/fact")

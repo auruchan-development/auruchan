@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 module.exports.run = async (auru, message, args) => {
-	try {
-		if (!args[0]) {
+	//try {
+	//	if (!args[0]) {
             const embed = new Discord.RichEmbed()
             .setTitle("AuruChan - User Commands List")
             .setColor("RANDOM")
@@ -10,10 +10,11 @@ module.exports.run = async (auru, message, args) => {
             .addField("Misc", "`auruprofile` `creator`")
             .setFooter("https://auru.vzrenggamani.tk/commands")
             message.channel.send(embed);
+            /*
 		} else {
 			let cmdName = require(`./${args[0]}.js`).help;
-			message.channel.send(``\`\`\nCommand      : ${cmdName.name}\nCategory     : ${cmdName.category}\nDescription  : ${cmdName.desc}\nUsage        : ${cmdName.use}\nParameter(s) : ${cmdName.param}\`\`\``);
-			/*
+			message.channel.send(```\`\nCommand      : ${cmdName.name}\nCategory     : ${cmdName.category}\nDescription  : ${cmdName.desc}\nUsage        : ${cmdName.use}\nParameter(s) : ${cmdName.param}\`\`\``);
+			
 			const coman = args[0];
             let comanlist = require(`./${coman}.js`).help;
             const wawa = new Discord.RichEmbed()
@@ -25,11 +26,12 @@ module.exports.run = async (auru, message, args) => {
             .setDescription(`${comanlist.desc}`)
             .setFooter("AuruChan Handbook!")
             message.channel.send(wawa);
-			*/
+			
 		}
 	} catch (err) {
 		message.reply(err);
-	}
+    }
+    */
 };
 
 module.exports.help = {

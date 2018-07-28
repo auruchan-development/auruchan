@@ -4,6 +4,8 @@ const osuconfig = require('../../config.json')
 
 exports.run = async (auru, message, args) => {
 
+    blocked();
+
     let usn = args[1];
     let mode = args[2];
 

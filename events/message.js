@@ -17,28 +17,25 @@ module.exports = async function(message) {
         "MANAGE_GUILD"
       ];
 
-    if (message.content.startsWith(config.prefixes)) {
-        try {
-            let dafile = require(`../commandos/serverop/${cmd}.js`)
-            let dnfile = require(`../commandos/user/${cmd}.js`)
-            let dofile = require(`../commandos/owner/${cmd}.js`)
-            dafile.run(auru, message, args)
-            dnfile.run(auru, message, args)
-            dofile.run(auru, message, args);
-        } catch (e) {
-            console.log(e.message)
-        }
-    }
     if (message.content.startsWith(`<@${config.botid}>`) || message.content.startsWith(`<@!${config.botid}>`)) {
-        message.channel.send("Feel free to acces my http://auru.vzrenggamani.tk")
+        message.channel.send("Feel free to access my http://auru.vzrenggamani.tk")
     };
 
     if (!message.content.startsWith(config.prefix)) {
     if (!message.content.startsWith(config.aprefix)) {
     if (!message.content.startsWith(config.oprefix)) {
+    if (!message.content.startsWith(config.sanprefix)) {
 	return;
-	}}}
+	}}}}
 
+    if (message.content.startsWith(config.sanprefix) && message.author.id === '303011486916411392') {
+        try {
+            let safile = require(`../commandos/sandbox/${cmd}.js`);
+            safile.run(auru, message, args);
+        } catch (e) {
+            console.log(e.message)
+        }
+    }
     
     if (message.content.startsWith(config.prefix)) {
         try {
@@ -66,4 +63,5 @@ module.exports = async function(message) {
             console.log(e.message)
         }
     }
+
 }
